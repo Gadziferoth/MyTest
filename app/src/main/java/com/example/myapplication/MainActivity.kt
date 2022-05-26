@@ -96,24 +96,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        //Function create expressions
-
-
         val listOfExp = listOf(::createExpMD10, ::createExpMD, ::createExpPM, ::createExpPM10)
         fun choose() {
-            var qwe = listOfExp[Random.nextInt(listOfExp.count())]
-            qwe()
-//            when (Random.nextInt(1, 5)) {
-//                1 -> createExpPM()
-//                2 -> createExpPM10()
-//                3 -> createExpMD()
-//                4 -> createExpMD10()
-//            }
+            var expNo = Random.nextInt(listOfExp.count())
+            var expFunction = listOfExp[expNo]
+            expFunction()
         }
 
         choose()
-
-        //  Button click
 
         btn1.setOnClickListener {
             val answer = editT1.text.toString().toIntOrNull() ?: return@setOnClickListener
