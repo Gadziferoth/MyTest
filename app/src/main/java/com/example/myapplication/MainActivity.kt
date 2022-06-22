@@ -7,6 +7,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.viewmodels.MainVM
 import kotlin.random.Random
 
 @SuppressLint("SetTextI18n")
@@ -29,6 +32,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var b : ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         btn1 = findViewById(R.id.button_1)
         textV1 = findViewById(R.id.textView_1)
