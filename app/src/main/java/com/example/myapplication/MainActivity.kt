@@ -108,6 +108,8 @@ class MainActivity : AppCompatActivity() {
             expFunction()
         }
 
+
+
         choose()
 
         btn1.setOnClickListener {
